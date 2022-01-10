@@ -1,2 +1,3 @@
 # LeetCodeSQL
-Query Submissions
+My query submissions
+
