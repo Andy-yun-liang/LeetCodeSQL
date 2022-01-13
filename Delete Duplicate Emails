@@ -1,0 +1,4 @@
+
+DELETE t2 FROM Person AS t1
+INNER JOIN Person AS t2
+ON t1.email = t2.email AND t1.id < t2.id;
