@@ -1,0 +1,5 @@
+SELECT x.name AS Department,x.emp_name AS Employee,x.emp_salary AS Salary FROM
+(SELECT e.name AS emp_name,e.salary AS emp_salary,e.departmentID AS empt_deptID,d.name AS name ,RANK() OVER(PARTITION BY departmentID ORDER BY salary DESC) AS rnking FROM Employee e
+INNER JOIN Department d
+ON e.departmentId = d.id) x
+WHERE x.rnking <2;
