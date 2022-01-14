@@ -1,0 +1,3 @@
+SELECT DISTINCT e.class FROM
+(SELECT *, ROW_NUMBER() OVER(PARTITION BY class) AS the_classes FROM Courses c) e
+WHERE e.the_classes >= 5;
